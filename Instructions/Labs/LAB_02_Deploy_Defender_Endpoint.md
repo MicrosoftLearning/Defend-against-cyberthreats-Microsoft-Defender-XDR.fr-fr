@@ -113,7 +113,7 @@ Dans cette tâche, vous allez configurer des groupes d’appareils qui autorisen
     |Paramètres généraux|Valeur|
     |---|---|
     |Nom du groupe d’appareils|**Regular**|
-    |Niveau de correction|Complet - Corrige automatiquement les menaces|
+    |Niveau de correction|Correction complète|
 
 1. Cliquez sur **Suivant**.
 
