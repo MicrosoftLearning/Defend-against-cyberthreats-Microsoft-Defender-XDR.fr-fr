@@ -84,7 +84,7 @@ Dans cette tâche, vous allez simuler une attaque sur la machine virtuelle WIN1 
 
 1. Pour exécuter le script, dans **Windows PowerShell (Admin)**, naviguez jusqu’au dossier *\Users\Admin\Desktop\Allfiles* et tapez *.\AttackScript.ps1*, puis appuyez sur **Entrée** pour l’exécuter. Ensuite, tapez **R** et appuyez sur **Entrée** pour *exécuter une fois*.
 
-1. Le script génère plusieurs lignes de sortie et un message indiquant *Impossible de résoudre les contrôleurs de domaine dans le domaine*. Quelques secondes plus tard, l’application *Bloc-notes* s’ouvre. Un code d’attaque simulé est injecté dans Bloc-notes. Laissez l’instance Bloc-notes générée automatiquement ouverte pour expérimenter le scénario complet. Le code d’attaque simulé va tenter de communiquer avec une adresse IP externe (simulant un serveur C2).
+1. Le script génère plusieurs lignes de sortie et un message indiquant *Impossible de résoudre les contrôleurs de domaine dans le domaine*. Quelques secondes plus tard, l’application *Bloc-notes* s’ouvre. Un code d’attaque simulé va être injecté dans le Bloc-notes (la page du Bloc-notes sera vide). Laissez l’instance Bloc-notes générée automatiquement ouverte pour expérimenter le scénario complet. Le code d’attaque simulé va tenter de communiquer avec une adresse IP externe (simulant un serveur C2).
 
 ### Tâche 4 : Examiner l’attaque simulée en tant qu’incident unique
 
