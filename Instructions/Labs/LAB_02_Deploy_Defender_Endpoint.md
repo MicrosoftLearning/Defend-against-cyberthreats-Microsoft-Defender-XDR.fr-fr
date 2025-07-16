@@ -20,7 +20,7 @@ Vous devriez terminer cet exercice en **15** minutes environ.
 
 ### Tâche 1 : initialiser Microsoft Defender pour point de terminaison
 
-Dans cette tâche, vous effectuez l’initialisation de Microsoft Defender for Endpoint.
+Dans cette tâche, vous effectuez l’initialisation de Microsoft Defender pour point de terminaison.
 
 1. Connectez-vous à la machine virtuelle **WIN1** en tant qu'administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
@@ -73,34 +73,49 @@ Dans cette tâche, vous allez intégrer un appareil à Microsoft Defender pour
 
 ### Tâche 3 : configurer des rôles
 
-Dans cette tâche, vous allez configurer des rôles à utiliser avec des groupes d’appareils.
+Dans cette tâche, vous configurez des rôles et les attribuez à des groupes d’appareils.
 
-1. Dans la barre de menus de gauche du portail Microsoft Defender XDR, développez la section **Système**, puis sélectionnez **Paramètres**. Ensuite, sélectionnez **Points de terminaison**.
+1. Dans le menu de navigation du portail Microsoft Defender XDR, développez la section **Système**, sélectionnez **Paramètres**, puis **Microsoft Defender XDR**.
 
-1. Sous la zone des autorisations, sélectionnez **Rôles**.
+1. Dans la section *Compte*, sélectionnez **Autorisations et rôles**.
 
-1. Sélectionnez le bouton **Activer les rôles** .
+1. Faites défiler la page vers le bas et sélectionnez le lien **Accéder aux autorisations et aux rôles**.
 
-1. Sélectionnez **+ Ajouter un rôle**.
+1. Sur la page *Autorisations et rôles*, sélectionnez **+ Créer un rôle personnalisé**.
 
-1. Dans la boîte de dialogue Ajouter un rôle, entrez les informations suivantes :
+1. Sur la page *Informations de base*, dans la boîte de dialogue Ajouter un rôle, entrez les informations suivantes :
 
-    |Paramètres généraux|Valeur|
+    |Paramètre de base|Valeur|
     |---|---|
     |Nom de rôle|**Support de niveau 1**|
-    |Autorisations|Fonctionnalités de réponse en direct – Avancées|
 
 1. Cliquez sur **Suivant**.
 
-1. Sélectionnez l’onglet **Groupes d’utilisateurs affectés** en haut. Sélectionnez **sg-IT**, puis **Ajouter des groupes sélectionnés**. Vérifiez qu’il apparaît sous *Groupes d’utilisateurs Azure AD avec ce rôle*.
+1. Sur la page **Autorisations**, sélectionnez les autorisations suivantes :
+
+    |Groupe d’autorisations|Description|  |Opérations de sécurité|Gère les opérations quotidiennes et répond aux incidents et aux avis|
+
+1. Sur la page contextuelle des *Opérations de sécurité*, cochez la case d’option **Toutes les autorisations de lecture et de gestion**.
+
+1. Sélectionnez **Appliquer**, puis **Suivant**.
+
+1. Sur la page **Affecter des utilisateurs et des sources de données**, sélectionnez le bouton **Créer une affectation**.
+
+1. Dans la boîte de dialogue *Ajouter une affectation*, entrez les informations suivantes :
+
+    |Paramètres d’affectation|Valeur|
+    |---|---|
+    |Nom de l’attribution|**Support de niveau 1**|
+    |Employees|****sg-IT**|
+    |Sources de données|**Conserver la valeur par défaut**|
+
+1. Sélectionnez **Ajouter**, puis **Suivant**.
 
 1. Sélectionnez **Envoyer**, puis **Terminé** lorsque vous avez terminé.
 
-    >**Remarque :** si vous recevez l’erreur *« L’utilisateur ne peut pas effectuer cette action, car son UserAuthEnforcementMode est Rbac et cette action nécessite l’une des opérations suivantes : RbacV2 »,* sélectionnez **OK** et réessayez.
-
 ### Tâche 4 : configurer des groupes d’appareils
 
-Dans cette tâche, vous allez configurer des groupes d’appareils qui autorisent la configuration du contrôle d’accès et de l’automatisation.
+Dans cette tâche, vous configurez des groupes d’appareils et spécifiez le contrôle d’accès et l’automatisation.
 
 1. Dans la barre de menus de gauche du portail Microsoft Defender XDR, développez la section **Système**, puis sélectionnez **Paramètres**. Ensuite, sélectionnez **Points de terminaison**.
 
@@ -117,9 +132,9 @@ Dans cette tâche, vous allez configurer des groupes d’appareils qui autorisen
 
 1. Cliquez sur **Suivant**.
 
-1. Sous l’onglet Appareils, pour la condition de système d’exploitation, sélectionnez **Windows 10**, puis **Suivant**.
+1. Sous l’onglet Périphériques, pour la condition de système d’exploitation, sélectionnez **Windows 11**, puis **Suivant**.
 
-    >**Remarque :** certains fournisseurs d’hébergement de labo peuvent avoir configuré des images *Windows 11* pour WIN1. Vous pouvez sélectionner l’un ou l’autre, ou les deux.
+    >**Note :** certains fournisseurs d’hébergement de labo peuvent avoir configuré des images *Windows 10* pour WIN1. Vous pouvez sélectionner l’un ou l’autre, ou les deux.
 
 1. Sous l’onglet Aperçu des appareils, le bouton *Afficher l’aperçu* peut afficher la machine virtuelle WIN1, mais il est probable que les données ne soient pas encore remplies. Sélectionnez **Suivant** pour continuer.
 
@@ -127,7 +142,7 @@ Dans cette tâche, vous allez configurer des groupes d’appareils qui autorisen
 
 1. Sélectionnez **Envoyer**, puis **Terminé** lorsque vous avez terminé.
 
-1. La configuration du groupe d’appareils a changé. Sélectionnez **Appliquer des modifications** pour vérifier les correspondances et recalculer les regroupements.
+1. Sur le message d’information *La configuration du groupe d’appareils a changé. Appliquez les modifications pour vérifier les correspondances et recalculer les regroupements*, sélectionnez **Appliquer les modifications**.
 
 1. Vous aurez maintenant deux groupes d’appareils : le groupe « Normal » que vous venez de créer et le groupe « Appareils non groupés (par défaut) » avec le même niveau de correction.
 
